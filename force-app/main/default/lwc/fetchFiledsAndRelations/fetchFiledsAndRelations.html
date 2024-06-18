@@ -1,0 +1,27 @@
+<template>
+	<lightning-card title={objectLabel} icon-name="custom:custom14">
+		<div class="slds-scrollable_y scroll-block">
+			<ul class="slds-var-m-around_medium">
+				<template for:each={fieldsInfo} for:item="field">
+					<li key={field.apiName}>
+						<lightning-button
+							value={field.apiName}
+							variant="base"
+							label={field.label}
+							title={field.label}
+							onclick={handleFieldClick}
+							class="slds-var-m-left_x-small"
+						></lightning-button>
+						<lightning-icon
+							lwc:if={field.isReference}
+							icon-name="utility:chevronright"
+							alternative-text="Utility image"
+							title="Image"
+							size="xx-small"
+						></lightning-icon>
+					</li>
+				</template>
+			</ul>
+		</div>
+	</lightning-card>
+</template>

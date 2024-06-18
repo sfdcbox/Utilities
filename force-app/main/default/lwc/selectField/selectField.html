@@ -1,0 +1,20 @@
+<template>
+	<lightning-card title="Field Selection">
+		<div class="slds-var-p-horizontal_small">
+			<!-- Default/basic -->
+			<div class="slds-var-p-around_medium lgc-bg">
+				<lightning-input
+					type="text"
+					label="Enter Object API Name"
+					onchange={handleInputChange}
+				></lightning-input>
+			</div>
+			<lightning-button
+				onclick={handleClick}
+				aria-haspopup="dialog"
+				label="Select"
+			>
+			</lightning-button>
+		</div>
+	</lightning-card>
+</template>
